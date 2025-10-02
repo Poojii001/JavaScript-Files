@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .main {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main .center {
+            width: 80%;
+            height: 38%;
+            background-color: lightgray;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 20px 20px gray;
+        }
+
+        .main .center .first,
+        .main .center .first {
+            width: 100%;
+            height: 100%;
+        }
+
+        .main .center .first {
+            display: flex;
+            justify-content: center;
+            font-size: 40px;
+            font-family: algerian;
+        }
+
+        .main .center .second {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .main .center .second .items {
+            width: 24%;
+            text-align: center;
+        }
+
+        .main .center .second .items h3,
+        .main .center .second .items h4 {
+            background-color: navy;
+            color: white;
+            padding: 20px 0;
+        }
+
+        .main .center .second .items h4 {
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="center">
+            <div class="first">
+                Time in new year
+            </div>
+            <div class="second">
+                <div class="items">
+                    <h3 id="days">00</h3>
+                    <h4>Days</h4>
+                </div>
+
+                <div class="items">
+                    <h3 id="hours">00</h3>
+                    <h4>Hours</h4>
+                </div>
+
+                <div class="items">
+                    <h3 id="minutes">00</h3>
+                    <h4>Minutes</h4>
+                </div>
+
+                <div class="items">
+                    <h3 id="seconds">00</h3>
+                    <h4>Seconds</h4>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let center = document.querySelector(".center")
+        let first = document.querySelector(".first")
+        let second = document.querySelector(".second")
+
+        let days = document.querySelector("#days")
+        let hours = document.querySelector("#hours")
+        let minutes = document.querySelector("#minutes")
+        let seconds = document.querySelector("#seconds")
+
+        var targetTime = new Date(2026, 0)
+        setInterval(() => {
+            let currentTime = new Date()
+            let diff = targetTime - currentTime
+            if (diff > 0) {
+                let num = parseInt(diff / (1000 * 60 * 60 * 24))
+                days.innerHTML = `${num < 10 ? '0' + num : num}`
+
+                num = parseInt(diff % (1000 * 60 * 60 * 24) / (1000 * 60 * 60))
+                hours.innerHTML = `${num < 10 ? '0' + num : num}`
+
+                num = parseInt(diff % (1000 * 60 * 60) / (1000 * 60))
+                minutes.innerHTML = `${num < 10 ? '0' + num : num}`
+
+                num = parseInt(diff % (1000 *60) / 1000)
+                seconds.innerHTML = `${num < 10 ? '0' + num : num}`
+            }
+            else {
+                center.removeChild(second)
+                first.innerHTML = "Happy New Year 2026"
+            }
+        },1000)
+    </script>
+</body>
+
+</html>

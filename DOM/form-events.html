@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .main {
+            width: 100vw;
+        }
+
+        .center {
+            width: 80%;
+            margin: auto;
+            background: lightgray;
+            padding: 20px;
+        }
+
+        .center h3,
+        .center h4 {
+            background-color: gray;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 1px;
+        }
+
+        .center h3 {
+            width: 100%;
+            padding: 10px 0;
+            margin: 5px 0;
+            border: none;
+            border-bottom: 5px solid gray;
+        }
+
+        .center input {
+            width: 100%;
+            padding: 10px 0;
+            margin: 5px 0;
+            border-bottom: 5px solid gray;
+        }
+
+        .center button {
+            background-color: gray;
+            color: white;
+            width: 100%;
+            border: none;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="center">
+            <h3>Form events</h3>
+            <h4 id="hname">Name :</h4>
+            <h4 id="hemail">Email :</h4>
+            <h4 id="hphone">Phone :</h4>
+            <h4 id="hdesignation">Designation :</h4>
+            <h4 id="hsalary">Salary :</h4>
+            <h4 id="hcity">City :</h4>
+            <h4 id="hstate">State :</h4>
+           
+
+            <!-- <form onsubmit="postData();return false" > -->
+            <form onsubmit="postData(event)" >
+                <input type="text" name="name" id="name" placeholder="Name :" onfocus="fun1(event)" onblur="fun2(event)"
+                    onchange="fun3(event)">
+                <input type="email" name="email" id="email" placeholder="Email :" onfocus="fun1(event)"
+                    onblur="fun2(event)" onchange="fun3(event)">
+                <input type="text" name="phone" id="phone" placeholder="Phone :" onfocus="fun1(event)"
+                    onblur="fun2(event)" onchange="fun3(event)">
+                <input type="text" name="designation" id="designation" placeholder="Designation :" onfocus="fun1(event)"
+                    onblur="fun2(event)" onchange="fun3(event)">
+                <input type="number" name="salary" id="salary" placeholder="Salary :" onfocus="fun1(event)"
+                    onblur="fun2(event)" onchange="fun3(event)">
+                <input type="text" name="city" id="city" placeholder="City :" onfocus="fun1(event)" onblur="fun2(event)"
+                    onchange="fun3(event)">
+                <input type="text" name="state" id="state" placeholder="State :" onfocus="fun1(event)"
+                    onblur="fun2(event)" onchange="fun3(event)">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        function fun1(event) {
+            event.target.style.backgroundColor = "pink"
+            event.target.style.color = "black"
+        }
+
+        function fun2(event) {
+            event.target.style.backgroundColor = "lightgray"
+            event.target.style.color = "navy"
+        }
+
+        function fun3(event) {
+            let input = event.target
+            let heading = document.getElementById(`h${input.id}`)
+            heading.innerHTML = `${input.placeholder} ${input.value}`
+        }
+        function postData(event) {
+            event.preventDefault()
+            alert(`
+            Name           : ${document.getElementById("name").value}
+            email          : ${document.getElementById("email").value}
+            phone          : ${document.getElementById("phone").value}
+            Designation    : ${document.getElementById("designation").value}
+            salary         : ${document.getElementById("salary").value}
+            Name           : ${document.getElementById("city").value}
+            Name           : ${document.getElementById("state").value}
+            `)
+        }
+    </script>
+</body>
+
+</html>

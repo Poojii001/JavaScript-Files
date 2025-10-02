@@ -1,0 +1,17 @@
+// 2nd : new Date(year,month,day,hour,minute,second,milisecond)
+
+var a = new Date(2025, 9, 20, 15, 30, 30, 2000)
+var b = new Date(2025, 9, 20, 15, 30, 30)
+var c = new Date(2025, 9, 20, 15, 30)
+var d = new Date(2025, 9, 20, 15)
+var e = new Date(2025, 9, 20)
+var f = new Date(2025, 9)
+var g = new Date(2025)
+
+console.log(a.toLocaleString())
+console.log(b.toLocaleString())
+console.log(c.toLocaleString())
+console.log(d.toLocaleString())
+console.log(e.toLocaleString())
+console.log(f.toLocaleString())
+console.log(g.toLocaleString())

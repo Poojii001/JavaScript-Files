@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+    <p id="p1" class="sample1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem ea nemo hic architecto
+        neque consequuntur eveniet odio eius molestias fugiat excepturi earum in est non tenetur alias saepe porro
+        praesentium eos voluptas, repellat unde! Laborum itaque sed consequatur ratione? Eum sed dignissimos quod ut
+        ullam rerum nostrum officiis animi nemo!</p>
+    <p id="p2" class="sample1">Error harum dignissimos labore mollitia neque, ducimus, reprehenderit architecto quis
+        eligendi nihil aperiam repellendus, consequatur et optio ea necessitatibus a voluptate! Veniam at recusandae
+        perferendis amet excepturi blanditiis iste eos ut nulla quod? Porro aliquam perferendis architecto ab natus
+        doloribus blanditiis quia sed. Quod natus architecto harum obcaecati doloribus! Atque?</p>
+    <p id="p3" class="sample1">Suscipit, aliquam quisquam facere eveniet, veniam aperiam iste quas earum omnis
+        exercitationem quaerat illo iure fuga repellendus iusto optio sequi provident consequuntur? Doloremque et
+        consequatur assumenda, hic aperiam explicabo labore? Ea hic excepturi labore, atque assumenda, consequuntur
+        fugiat minus at, possimus placeat qui ex culpa sint praesentium deserunt quibusdam ducimus?</p>
+    <p id="p4" class="sample1">Quasi eum non soluta minus esse eos beatae iure. Aut cumque adipisci deserunt rem
+        obcaecati explicabo iste perspiciatis fugiat, doloribus laboriosam incidunt molestiae. Consequatur recusandae,
+        ratione facere harum neque sequi et unde blanditiis eligendi, porro, temporibus magni? Iste architecto corporis
+        voluptates dolorem, maxime totam obcaecati praesentium cum, assumenda, ea unde.</p>
+    <p id="p5" class="sample1">Harum architecto nesciunt delectus quaerat nihil id dolore quam tempore ipsa iusto esse,
+        qui quos, voluptatibus ratione amet at autem. Dignissimos sequi tenetur id aspernatur delectus, consequuntur,
+        non est nostrum odio minima reprehenderit possimus. Repellendus deleniti eos, molestiae obcaecati hic rem,
+        distinctio quos excepturi esse, impedit tenetur magnam maiores veniam.</p>
+    <p id="p6" class="sample2">Dolores minus qui consequuntur repellat nihil soluta fugit cumque, accusamus odit
+        accusantium veritatis est, hic quas alias, asperiores sequi ad nobis! Impedit, corrupti animi? Optio illum
+        facere sed in! Nihil facere optio aperiam quidem aut repellendus, veniam fugit architecto? Voluptatum voluptas
+        distinctio quidem exercitationem totam enim qui blanditiis reprehenderit suscipit?</p>
+    <p id="p7" class="sample2">Facilis quibusdam rerum fugiat obcaecati nulla, excepturi quos eligendi quaerat sit saepe
+        voluptates praesentium in, quae, alias odio. Eos ut aliquid fugit iste dolorum fuga quam dolorem maiores earum?
+        Fugit, reprehenderit magni sapiente alias provident ullam vero eum eos cupiditate minus facilis quam cum
+        veritatis maiores nulla velit quia maxime?</p>
+    <p id="p8" class="sample2">Aut vel, repellendus dolores deleniti ad perspiciatis officia sint impedit qui expedita
+        libero maiores deserunt hic distinctio blanditiis at ab, excepturi perferendis? Laboriosam esse asperiores
+        dolorum. Tempora quis a dolorem, numquam error maxime veniam. Nulla, asperiores, modi accusamus quia ipsum
+        corrupti soluta laudantium quo enim dolores eligendi illo quam facilis.</p>
+    <p id="p9" class="sample2">Quam, nisi modi exercitationem praesentium labore facilis voluptate repellat in minima
+        accusantium eaque magnam ad aperiam dolorem debitis perferendis animi quis! Ex, necessitatibus odio nulla
+        possimus ad, rem, reprehenderit officia nesciunt dicta beatae tempore. Natus dicta alias, maiores sit in porro
+        sed iste deserunt, non aperiam ipsam! Eos, dicta officiis.</p>
+    <p id="p10" class="sample2">Ipsa error eius dignissimos sed veritatis omnis. Neque repudiandae in nisi saepe
+        aspernatur veritatis doloremque autem ab et facere ipsam modi ipsum cupiditate molestiae, consequuntur
+        laboriosam architecto aut velit. Officiis voluptas distinctio pariatur deleniti molestias, itaque enim tempore
+        quibusdam ea veniam aliquam eaque. Aliquam porro error aut? Modi, non earum.</p>
+</body>
+
+<script>
+    // 1.Get elements By Id Selector
+    // var p = document.getElementById("p3")
+    // console.log(p)
+    // console.log(p.id)
+    // console.log(p.classList)
+    // console.log(p.classinnerHTML)
+    // console.log(p.classinnerText)
+    // console.log(p.style)
+    // p.style.backgroundColor = "navy"
+    // p.style.color = "white"
+    // p.style.padding = "10px"
+    // p.style.textALign = "justify"
+    // p.style.fontSize = "20px"
+
+    // 2.Get elements by class Name
+    // var items = document.getElementsByClassName("sample2")
+    // for (let p of items) {
+    //     p.style.backgroundColor = "navy"
+    //     p.style.color = "white"
+    //     p.style.padding = "10px"
+    //     p.style.textALign = "justify"
+    //     p.style.fontSize = "20px"
+    // }
+    // 3.get elements by tag name
+    // var items = document.getElementsByTagName("p")
+    // for (let p of items) {
+    //     p.style.backgroundColor = "navy"
+    //     p.style.color = "white"
+    //     p.style.padding = "10px"
+    //     p.style.textALign = "justify"
+    //     p.style.fontSize = "20px"
+    // }
+    // 4.get elements by query selector
+    // var p = document.querySelector("#p3")
+    // var p = document.querySelector(".sample2")
+    // var p = document.querySelector("p")
+    // p.style.backgroundColor = "navy"
+    // p.style.color = "white"
+    // p.style.padding = "10px"
+    // p.style.textALign = "justify"
+    // p.style.fontSize = "20px"
+
+    // 5.get Elements By Query selector All 
+    var items = document.querySelectorAll(["p2", "#p4", "#p7", "#p8"])
+    items.forEach(p => {
+        p.style.backgroundColor = "navy"
+        p.style.color = "white"
+        p.style.padding = "10px"
+        p.style.textALign = "justify"
+        p.style.fontSize = "20px"
+
+    })
+</script>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    *{
+        margin : 0;
+    }
+    .main{
+        width:100vw;
+        height:100vh;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .center{
+        width: 70%;
+        height: 50%;
+        background-color: gray;
+    }
+    .center button {
+        background-color: black;
+        color: white;
+        padding: 10px;
+        width: 100%;
+        border: none;
+    }
+    .center p{
+        background-color: black;
+        color: white;
+        margin-top: 10px;
+        padding: 20px;
+        font-size: 1.5rem;
+        text-align: justify;
+    }
+</style>
+</head>
+<body>
+    <div class="main">
+        <div class="center">
+            <button id="btn" onclick="fun()">Change</button>
+            <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dignissimos consequatur
+                necessitatibus fugiat! Officia, harum repellendus. Aspernatur at ea modi consequatur earum itaque rerum,
+                minima nesciunt. Ut vel minus officia, exercitationem voluptate ab neque sit rem, autem eum amet
+                expedita praesentium impedit ea qui dolore voluptatem enim nisi suscipit assumenda ipsam, necessitatibus
+                doloribus cum sunt. Adipisci doloribus ad nulla, dolorum veritatis explicabo quia laudantium. Est
+                consectetur quia doloribus consequatur sed sit praesentium tenetur modi! Quisquam quaerat aliquid
+                repellendus sed dolorum commodi sit temporibus ipsum debitis quo? Amet non quasi distinctio, soluta
+                consequuntur impedit nam v
+            </p>
+   
+        </div>
+    </div>
+    <script>
+        var text1 = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dignissimos consequatur necessitatibus fugiat! Officia, harum repellendus. Aspernatur at ea modi consequatur earum itaque rerum, minima nesciunt. Ut vel minus officia, exercitationem voluptate ab neque sit rem, autem eum amet expedita praesentium impedit ea qui dolore voluptatem enim nisi suscipit assumenda ipsam, necessitatibus doloribus cum sunt. Adipisci doloribus ad nulla, dolorum veritatis explicabo quia laudantium. Est consectetur quia doloribus consequatur sed sit praesentium tenetur modi! Quisquam quaerat aliquid repellendus sed dolorum commodi sit temporibus ipsum debitis quo? Amet non quasi distinctio, soluta consequuntur impedit nam veritatis reiciendis harum repellendus. Doloremque, temporibus"
+        var text2 = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam expedita praesentium impedit ea qui dolore voluptatem enim nisi suscipit assumenda ipsam, necessitatibusdoloribus cum sunt. Adipisci doloribus ad nulla, dolorum veritatis explicabo quia laudantium. Estconsectetur quia doloribus consequatur sed sit praesentium tenetur modi! Quisquam quaerat aliquid"
+       
+        var btn = document.getElementById("btn")
+        var para = document.getElementById("para")
+
+        function fun() {
+
+            if (btn.innerHTML == "Change"){
+                btn.innerHTML = "Reset"
+                para.innerHTML = text2
+                btn.style.backgroundColor = "navy"
+                para.style.backgroundColor = "navy"
+            }
+            else {
+                btn.innerHTML = "Change"
+                para.innerHTML = text1
+                btn.style.backgroundColor = "black"
+                para.style.backgroundColor = "black"
+            }
+        }
+    </script>
+</body>
+
+</html>

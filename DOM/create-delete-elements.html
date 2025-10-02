@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=delete" />
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .main {
+            width: 100vw;
+            height: 100vh;
+            background-color: lightgray;
+        }
+
+        .cennter {
+            background-color: white;
+            width: 80%;
+            height: 100%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .first,
+        .second {
+            width: 100%;
+        }
+
+        .first {
+            height: 7%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .first button {
+            background: gray;
+            color: white;
+            width: 33%;
+            border: none;
+        }
+
+        .second {
+            height: 90%;
+            overflow: auto;
+        }
+
+        .second::-webkit-scrollbar {
+            display: none;
+        }
+
+        .second p {
+            background-color: gray;
+            color: white;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .icon {
+            float: right;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="center">
+            <div class="first">
+                <button onclick="create()">Create</button>
+                <button onclick="deletefirstElement()">Delete First</button>
+                <button onclick="deleteAllElement()">Delete All</button>
+            </div>
+            <div class="second">
+            </div>
+        </div>
+    </div>
+    <script>
+        var center = document.querySelector(".center")
+        var second = document.querySelector(".second")
+
+        var count = 1
+        function create() {
+            var p = document.createElement("p")
+            p.id = `p${count}`
+            p.innerHTML = `This is paragraph p${count}<span class="material-symbols-outlined icon" onclick="deleteItem('p${count}')
+            ">delete</span>`
+            count++
+
+            second.appendChild(p)
+        }
+
+        function deleteItem(id) {
+            second.removeChild(document.getElementById(id))
+        }
+
+        function deleteFirstElement() {
+            if (second.childNodes.length > 1)
+                second.removeChild(second.childNodes[1])
+        }
+        function deleteAllElement() {
+            center.remove.child(second)
+            second = document.getElementById("div")
+            second.classList.add("second")
+            center.appendChild(second)
+        }
+    </script>
+</body>
+
+</html>

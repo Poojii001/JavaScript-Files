@@ -1,0 +1,5 @@
+console.log(String.fromCharCode(65))
+console.log(String.fromCharCode(90))
+console.log(String.fromCharCode(97))
+console.log(String.fromCharCode(122))
+console.log(String.fromCharCode(8377))
