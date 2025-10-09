@@ -1,0 +1,13 @@
+function sum(num1){
+    return function(num2){
+        return function(num3){
+            return function(num4){
+                return function(num4){
+                    return num1+num2+num3+num4+num5
+                }
+            }
+        }
+    }  
+}
+    var sum = (num1)=>(num2)=>(num3)=>(num4)=>(num5)=>num1+num2+num3+num4+num5
+    console.log(sum(100)(200)(300)(400)(500))
